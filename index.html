@@ -1,0 +1,85 @@
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>gray</title>
+  <style>
+    body {
+      background-color: #000000;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff0034;
+    }
+
+    p {
+      text-align: center;
+      font-size: 20px; 
+      color: #ffeaea;
+      
+      
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      border: 6px solid #a42bff;
+      border-radius: 40px 0px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 3px 3px;
+      border-radius: 100%;
+      background-color: #a42bff; 
+      border:2px solid white;
+      
+      font-size: 30px;  
+      width: 60px;
+      height:60px;
+    }
+
+    @media (max-width: 600px) {
+      img {
+        width: 75%; 
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Eu te amo muito</h1>
+  <p id="frase">Você é a pessoa mais especial da minha vida.</p>
+  <img id="imagem" src="eueela.jpeg">
+  <button id="botao" onclick="mudar()"> &#10084;&#65039</button>
+  
+  <script>
+    var frases = [
+      "Você me faz feliz todos os dias.",
+      "Você é linda, inteligente, carinhosa e divertida.",
+      "Eu quero estar sempre ao seu lado.",
+      "Você é o meu sonho realizado.",
+      "Você é o meu melhor presente."
+    ];
+
+    var imagens = [
+      "eueela.jpeg", 
+      "foto.jpeg",
+      "imagem4.jpg",
+      "imagem2.jpg",
+      "imagem3.jpg"
+    ];
+
+    var indice = 0;
+
+    function mudar() {
+      indice = (indice + 1) % frases.length;
+      document.getElementById("frase").innerHTML = frases[indice];
+      document.getElementById("imagem").src = imagens[indice];
+    }
+  </script>
+</body>
+</html>
+
